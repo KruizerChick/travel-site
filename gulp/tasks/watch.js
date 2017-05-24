@@ -22,6 +22,12 @@ gulp.task('watch', function(){
         // Run the 'styles' task upon changes
         gulp.start('cssInject');
     });
+
+    // Watch all JS files in the styles folder and subfolders
+    watch('./app/assets/scripts/**/*.js', function(){
+        // Run the 'styles' task upon changes
+        gulp.start('scriptsRefresh');
+    });
 });
 
 // Injects CSS changes without refreshing the browser
@@ -29,3 +35,8 @@ gulp.task('cssInject', ['styles'],function(){
     return gulp.src('./app/temp/styles/styles.css')
     .pipe(browserSync.stream());
 });
+
+// Refreshes page upon
+gulp.task('scriptsRefresh', ['scripts'], function() {
+    browserSync.reload();
+})
