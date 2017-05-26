@@ -5,11 +5,11 @@ Instead, edit gulp/templates/sprite */
   {{#first}}
   /* For browsers who can handle SVG images */
   .icon {
-    background-image: url('/assets/images/sprites/{{{sprite}}}');
+    background-image: url('../../assets/images/sprites/{{{sprite}}}');
   }
   /* For browsers who can NOT handle SVG images and need PNG images */
   .no-svg .icon {
-    background-image: url('/assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
+    background-image: url('../../assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
   }
 
   {{/first}}

@@ -11,7 +11,7 @@ gulp.task('watch', function(){
             baseDir: "app",
             browser: "google chrome"
         }
-    })
+    });
     // Watch index.html
     watch('./app/index.html', function(){
         // Refresh the browser whenever the index.html file is changed
